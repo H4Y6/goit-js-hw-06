@@ -1,12 +1,7 @@
 const inputRef = document.querySelector("#validation-input");
-function checkBlur(event) {
-    if (event.currentTarget.value.length == inputRef.dataset.length) {
-        inputRef.classList.remove("invalid");
-        inputRef.classList.add("valid");
-        return inputRef;
+const checkBlur = event => { if (event.currentTarget.value.length == inputRef.dataset.length) {
+      return  inputRef.classList.replace("invalid", "valid");
     };
-    inputRef.classList.remove("valid");
-    inputRef.classList.add("invalid");
-    return inputRef;
+   return inputRef.classList.add("invalid");
     };
 inputRef.addEventListener("blur", checkBlur); 

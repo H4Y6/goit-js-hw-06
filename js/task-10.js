@@ -10,11 +10,11 @@ btnCreateRef.addEventListener('click', () => createBoxes(inputRef.value));
 function createBoxes(amount) {
     const boxes = [];
     for (let i = 30; i < 30 + amount * 10; i += 10) {
-        const boxe = document.createElement("div");
-        boxe.style.width = `${i}px`;
-        boxe.style.height = `${i}px`;
-        boxe.style.backgroundColor = getRandomHexColor();
-        boxes.push(boxe);
+        const box = document.createElement("div");
+        box.style.width = `${i}px`;
+        box.style.height = `${i}px`;
+        box.style.backgroundColor = getRandomHexColor();
+        boxes.push(box);
     };
     return boxesRef.append(...boxes);
 };
